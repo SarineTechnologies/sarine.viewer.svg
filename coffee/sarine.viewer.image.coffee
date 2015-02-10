@@ -1,4 +1,4 @@
-class Viewer.Image extends Viewer
+class Image extends Viewer
 	
 	constructor: (options) ->
 		{@imagesArr} = options		
@@ -26,4 +26,6 @@ class Viewer.Image extends Viewer
 	full_init : ()-> return			
 	play : () -> return		
 	stop : () -> return
+
+@Image = Image
 		
