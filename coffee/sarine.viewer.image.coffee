@@ -1,8 +1,7 @@
 class Viewer.Image extends Viewer
 	
 	constructor: (options) ->
-		{@imagesArr} = options
-		@canvasObj = {}
+		{@imagesArr} = options		
 		super(options)				
 
 	convertElement : () ->				
@@ -14,7 +13,7 @@ class Viewer.Image extends Viewer
 		
 		_t = @			
 		for name, index in @imagesArr
-			_t.loadImage(_t.src  + name).then((img)->
+			@loadImage(_t.src  + name).then((img)->
 				canvas = $("<canvas>")
 				ctx = canvas[0].getContext('2d')				
 				canvas.attr({width : img.width, height : img.height})							
