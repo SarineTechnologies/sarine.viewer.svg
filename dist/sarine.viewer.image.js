@@ -1,20 +1,21 @@
 (function() {
-  var __hasProp = {}.hasOwnProperty,
+  var SarineImage,
+    __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  Viewer.Image = (function(_super) {
-    __extends(Image, _super);
+  SarineImage = (function(_super) {
+    __extends(SarineImage, _super);
 
-    function Image(options) {
+    function SarineImage(options) {
+      SarineImage.__super__.constructor.call(this, options);
       this.imagesArr = options.imagesArr;
-      Image.__super__.constructor.call(this, options);
     }
 
-    Image.prototype.convertElement = function() {
+    SarineImage.prototype.convertElement = function() {
       return this.element;
     };
 
-    Image.prototype.first_init = function() {
+    SarineImage.prototype.first_init = function() {
       var defer, index, name, _i, _len, _ref, _t;
       defer = $.Deferred();
       defer.notify(this.id + " : start load first image");
@@ -22,7 +23,7 @@
       _ref = this.imagesArr;
       for (index = _i = 0, _len = _ref.length; _i < _len; index = ++_i) {
         name = _ref[index];
-        this.loadImage(_t.src + name).then(function(img) {
+        this.loadImage(this.src + name).then(function(img) {
           var canvas, ctx;
           canvas = $("<canvas>");
           ctx = canvas[0].getContext('2d');
@@ -38,14 +39,16 @@
       return defer;
     };
 
-    Image.prototype.full_init = function() {};
+    SarineImage.prototype.full_init = function() {};
 
-    Image.prototype.play = function() {};
+    SarineImage.prototype.play = function() {};
 
-    Image.prototype.stop = function() {};
+    SarineImage.prototype.stop = function() {};
 
-    return Image;
+    return SarineImage;
 
   })(Viewer);
+
+  this.SarineImage = SarineImage;
 
 }).call(this);

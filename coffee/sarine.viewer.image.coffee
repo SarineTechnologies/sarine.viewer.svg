@@ -1,8 +1,8 @@
-class Image extends Viewer
+class SarineImage extends Viewer
 	
-	constructor: (options) ->
-		{@imagesArr} = options		
-		super(options)				
+	constructor: (options) ->			
+		super(options)		
+		{@imagesArr} = options			
 
 	convertElement : () ->				
 		@element		
@@ -13,7 +13,7 @@ class Image extends Viewer
 		
 		_t = @			
 		for name, index in @imagesArr
-			@loadImage(_t.src  + name).then((img)->
+			@loadImage(@src  + name).then((img)->
 				canvas = $("<canvas>")
 				ctx = canvas[0].getContext('2d')				
 				canvas.attr({width : img.width, height : img.height})							
@@ -27,5 +27,5 @@ class Image extends Viewer
 	play : () -> return		
 	stop : () -> return
 
-@Image = Image
+@SarineImage = SarineImage
 		
