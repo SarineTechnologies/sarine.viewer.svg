@@ -36,35 +36,31 @@ console.log ""
 
 
 class Viewer.Image extends Viewer
-
+	
 	constructor: (options) ->
-		super(options)
-		@debugBaseId = @id + "_" + @element.data("type")
+		{@imagesArr} = options		
+		super(options)				
 
-	convertElement : () ->
-		@img = $("<img>")				
-		@element.append(@img)
+	convertElement : () ->				
+		@element		
 
 	first_init : ()->
 		defer = $.Deferred()
 		defer.notify(@id + " : start load first image")						
-		window.performance.measure(@debugBaseId + "_first_init")
-		window.performance.mark(@debugBaseId + "_first_init_start")
-		_t = @
-		@loadImage(@src).then((img)->
-			_t.img.attr {'src': img.src, 'width':img.width, 'height': img.height}				
-			defer.resolve()	
-			window.performance.mark(_t.debugBaseId + "_first_init_end")
-			measure = window.performance.getEntriesByName(_t.debugBaseId + "_first_init")[0]	
-			totalTime = measure.duration + measure.startTime
-			performanceManager.WriteToLog(_t.debugBaseId + "_first_init", totalTime)							
-		)
-    	
+		
+		_t = @			
+		for name, index in @imagesArr
+			@loadImage(_t.src  + name).then((img)->
+				canvas = $("<canvas>")
+				ctx = canvas[0].getContext('2d')				
+				canvas.attr({width : img.width, height : img.height})							
+				ctx.drawImage(img, 0, 0, img.width, img.height)
+				_t.element.append(canvas)
+				defer.resolve()												
+			)
 		defer
 
-	full_init : ()-> 
-		performanceManager.WriteToLog(@debugBaseId + "_full_init", 0)	
-		return			
+	full_init : ()-> return			
 	play : () -> return		
 	stop : () -> return
 		

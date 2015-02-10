@@ -69,41 +69,39 @@
     __extends(Image, _super);
 
     function Image(options) {
+      this.imagesArr = options.imagesArr;
       Image.__super__.constructor.call(this, options);
-      this.debugBaseId = this.id + "_" + this.element.data("type");
     }
 
     Image.prototype.convertElement = function() {
-      this.img = $("<img>");
-      return this.element.append(this.img);
+      return this.element;
     };
 
     Image.prototype.first_init = function() {
-      var defer, _t;
+      var defer, index, name, _i, _len, _ref, _t;
       defer = $.Deferred();
       defer.notify(this.id + " : start load first image");
-      window.performance.measure(this.debugBaseId + "_first_init");
-      window.performance.mark(this.debugBaseId + "_first_init_start");
       _t = this;
-      this.loadImage(this.src).then(function(img) {
-        var measure, totalTime;
-        _t.img.attr({
-          'src': img.src,
-          'width': img.width,
-          'height': img.height
+      _ref = this.imagesArr;
+      for (index = _i = 0, _len = _ref.length; _i < _len; index = ++_i) {
+        name = _ref[index];
+        this.loadImage(_t.src + name).then(function(img) {
+          var canvas, ctx;
+          canvas = $("<canvas>");
+          ctx = canvas[0].getContext('2d');
+          canvas.attr({
+            width: img.width,
+            height: img.height
+          });
+          ctx.drawImage(img, 0, 0, img.width, img.height);
+          _t.element.append(canvas);
+          return defer.resolve();
         });
-        defer.resolve();
-        window.performance.mark(_t.debugBaseId + "_first_init_end");
-        measure = window.performance.getEntriesByName(_t.debugBaseId + "_first_init")[0];
-        totalTime = measure.duration + measure.startTime;
-        return performanceManager.WriteToLog(_t.debugBaseId + "_first_init", totalTime);
-      });
+      }
       return defer;
     };
 
-    Image.prototype.full_init = function() {
-      performanceManager.WriteToLog(this.debugBaseId + "_full_init", 0);
-    };
+    Image.prototype.full_init = function() {};
 
     Image.prototype.play = function() {};
 
