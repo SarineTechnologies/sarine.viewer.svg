@@ -1,26 +1,30 @@
 class Viewer.Image extends Viewer
-
+	
 	constructor: (options) ->
-		super(options)
-		@debugBaseId = @id + "_" + @element.data("type")
+		{@imagesArr} = options
+		@canvasObj = {}
+		super(options)				
 
-	convertElement : () ->
-		@img = $("<img>")				
-		@element.append(@img)
+	convertElement : () ->				
+		@element		
 
 	first_init : ()->
 		defer = $.Deferred()
 		defer.notify(@id + " : start load first image")						
 		
-		_t = @
-		@loadImage(@src).then((img)->
-			_t.img.attr {'src': img.src, 'width':img.width, 'height': img.height}				
-			defer.resolve()				
-		)
-    	
+		_t = @			
+		for name, index in @imagesArr
+			_t.loadImage(_t.src  + name).then((img)->
+				canvas = $("<canvas>")
+				ctx = canvas[0].getContext('2d')				
+				canvas.attr({width : img.width, height : img.height})							
+				ctx.drawImage(img, 0, 0, img.width, img.height)
+				_t.element.append(canvas)
+				defer.resolve()												
+			)
 		defer
 
-	full_init : ()->  return			
+	full_init : ()-> return			
 	play : () -> return		
 	stop : () -> return
 		
