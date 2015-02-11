@@ -19,7 +19,7 @@ class SarineImage extends Viewer
 				canvas.attr({width : img.width, height : img.height})							
 				ctx.drawImage(img, 0, 0, img.width, img.height)
 				_t.element.append(canvas)
-				defer.resolve()												
+				defer.resolve(_t)												
 			)
 		defer
 
