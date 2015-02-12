@@ -1,6 +1,6 @@
 class SarineImage extends Viewer
 	
-	constructor: (options) ->			
+	constructor: (options) -> 			
 		super(options)		
 		{@imagesArr} = options			
 
@@ -23,7 +23,10 @@ class SarineImage extends Viewer
 			)
 		defer
 
-	full_init : ()-> return			
+	full_init : ()-> 
+		defer = $.Deferred()
+		defer.resolve(@)		
+		defer
 	play : () -> return		
 	stop : () -> return
 
