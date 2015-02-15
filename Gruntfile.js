@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt)
-    var files = ["Gruntfile.js", "package.json", "dist/*.js", "coffee/*.coffee", "bower.json", "release.cmd", "commit.cmd"]
+    var files = ["Gruntfile.js", "copyright.txt", "GruntfileBundle.js", "package.json", "dist/*.js", "coffee/*.coffee", "bower.json", "release.cmd", "commit.cmd"]
     var message = "commit"
     grunt.initConfig({
         config: grunt.file.readJSON("bower.json"),
@@ -74,5 +74,5 @@ module.exports = function(grunt) {
         }
     })
     grunt.registerTask('commit', ['prompt', 'gitadd', 'gitcommit:all', 'gitpush']);
-    grunt.registerTask('release-git', ['version:project:patch', 'gitcommit:bower', 'release']);
+    grunt.registerTask('release-git', ['release:' + grunt.file.readJSON("bower.json")["version"]]);
 };
