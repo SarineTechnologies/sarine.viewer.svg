@@ -1,6 +1,6 @@
 {
   "name": "sarine.viewer.image",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/sarine.viewer.image.js",
   "ignore": [
     ".git",
