@@ -1,5 +1,10 @@
 'use strict';
 module.exports = function(grunt) {
+    var path = require("path");
+    var dirname = __dirname.split(path.sep)
+    dirname.pop();
+    dirname = dirname.pop();
+    var branch = "dev"
     require('load-grunt-tasks')(grunt)
     var files = ["Gruntfile.js", "copyright.txt", "GruntfileBundle.js", "package.json", "dist/*.js", "coffee/*.coffee", "bower.json", "release.cmd", "commit.cmd"]
     var message = "commit"
@@ -8,6 +13,14 @@ module.exports = function(grunt) {
         version: {
             project: {
                 src: ['bower.json', 'package.json']
+            }
+        },
+        gitcheckout: {
+            task: {
+                options: {
+                    branch: "<%= branch %>",
+                    overwrite: true
+                }
             }
         },
         gitcommit: {
@@ -33,6 +46,7 @@ module.exports = function(grunt) {
         gitpush: {
             all: {
                 options: {
+                    branch: "<%= branch %>",
                     force: true
                 },
                 files: {
@@ -64,11 +78,25 @@ module.exports = function(grunt) {
             all: {
                 options: {
                     questions: [{
+                        config: 'config.customBranch',
+                        type: 'confirm',
+                        message: 'create new branch base on the folder name - ' + dirname
+                    }, {
                         config: 'config.message',
                         type: 'input',
                         message: 'comment:\n',
                         default: 'commit'
-                    }]
+                    }],
+                    then: function(results, done) {
+                        grunt.log.writeln(results["config.customBranch"])
+                        grunt.config.set('branch', 'dev')
+                        if (results["config.customBranch"]) {
+                            grunt.config.set('branch', dirname);
+                            grunt.task.run('gitcheckout:task');
+                        }
+                        done();
+                        return true;
+                    }
                 }
             }
         }
