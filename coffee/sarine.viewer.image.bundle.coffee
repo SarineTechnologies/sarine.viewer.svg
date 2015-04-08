@@ -1,5 +1,5 @@
 ###!
-sarine.viewer.image - v0.1.0 -  Monday, April 6th, 2015, 6:48:37 PM 
+sarine.viewer.image - v0.1.0 -  Wednesday, April 8th, 2015, 3:25:56 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
 ###
 
@@ -45,7 +45,7 @@ class SarineImage extends Viewer
 
 	first_init : ()->
 		defer = $.Deferred() 
-		defer.notify(@id + " : start load first image")						
+		defer.notify(@id + " : start load first image1")						
 		
 		_t = @			
 		for name, index in @imagesArr 
