@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 10:06:32 AM 
+sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 2:19:01 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -76,6 +76,8 @@ sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 10:06:32 AM
     function SarineSvg(options) {
       SarineSvg.__super__.constructor.call(this, options);
       this.imagesArr = options.imagesArr, this.jsonFileName = options.jsonFileName, this.svg = options.svg;
+      this.version = $(this.element).data("version") || "v1";
+      this.viewersBaseUrl = stones[0].viewersBaseUrl;
     }
 
     SarineSvg.prototype.convertElement = function() {
@@ -86,9 +88,9 @@ sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 10:06:32 AM
       var defer, _t;
       _t = this;
       defer = $.Deferred();
-      return $.getJSON(this.src + this.jsonFileName, function(data) {
+      $.getJSON(this.src + this.jsonFileName, function(data) {
         _t.data = data;
-        return $(_t.element).load(_t.src + _t.svg, function(data) {
+        return $(_t.element).load(_t.viewersBaseUrl + "atomic/" + _t.version + "/assets/" + _t.svg, function(data) {
           _t.element.find("#SVG_width_mm").text(_t.data.Width.mm + "mm");
           _t.element.find("#SVG_table_pre").text(_t.data["Table Size"].percentages + "%");
           _t.element.find("#SVG_crown_pre").text(_t.data["Crown"]["height-percentages"] + "%");
@@ -98,10 +100,12 @@ sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 10:06:32 AM
           _t.element.find("#SVG_girdle_pre").text(_t.data["Girdle"]["Thickness-percentages"] + "%");
           _t.element.find("#SVG_girdle_mm").text(_t.data["Girdle"]["Thickness-mm"] + "mm");
           _t.element.find("#SVG_culet_mm").text(_t.data["Culet Size"].mm + "mm");
-          _t.element.find("#SVG_crown_rounded").text(_t.data["Crown"]["angel-deg"] + "%");
-          return _t.element.find("#SVG_pavillion_rounded").text(_t.data["Pavilion"]["angel-deg"] + "%");
+          _t.element.find("#SVG_crown_rounded").text(_t.data["Crown"]["angel-deg"] + "°");
+          _t.element.find("#SVG_pavillion_rounded").text(_t.data["Pavilion"]["angel-deg"] + "°");
+          return defer.resolve(_t);
         });
       });
+      return defer;
     };
 
     SarineSvg.prototype.full_init = function() {
