@@ -1,7 +1,7 @@
 {
-  "name": "sarine.viewer.image",
-  "version": "0.1.0",
-  "main": "dist/sarine.viewer.image.js",
+  "name": "sarine.viewer.svg",
+  "version": "0.0.0",
+  "main": "dist/sarine.viewer.svg.js",
   "ignore": [
     ".git",
     "node_modules",
