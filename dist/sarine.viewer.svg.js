@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 2:19:01 PM 
+sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 3:04:01 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -41,6 +41,8 @@ sarine.viewer.svg - v0.0.0 -  Tuesday, April 28th, 2015, 2:19:01 PM
           _t.element.find("#SVG_culet_mm").text(_t.data["Culet Size"].mm + "mm");
           _t.element.find("#SVG_crown_rounded").text(_t.data["Crown"]["angel-deg"] + "°");
           _t.element.find("#SVG_pavillion_rounded").text(_t.data["Pavilion"]["angel-deg"] + "°");
+          _t.element.find("#SVG_total_depth_per").text(_t.data["Total Depth"]["mm"] + "mm");
+          _t.element.find("#SVG_total_depth_mm").text(_t.data["Total Depth"]["percentages"] + "%");
           return defer.resolve(_t);
         });
       });
