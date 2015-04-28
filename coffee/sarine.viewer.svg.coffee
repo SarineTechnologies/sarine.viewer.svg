@@ -33,8 +33,6 @@ class SarineSvg extends Viewer
 				_t.element.find("#SVG_total_depth_per").text(_t.data["Total Depth"]["mm"] + "mm")
 				_t.element.find("#SVG_total_depth_mm").text(_t.data["Total Depth"]["percentages"] + "%")
 				defer.resolve(_t)
-			.fail ()->
-				defer.resolve(_t)
 		.fail ()->
 			defer.resolve(_t)
 
