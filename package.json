@@ -26,5 +26,5 @@
     "install": "^0.1.8",
     "load-grunt-tasks": "^3.1.0"
   },
-  "version": "0.0.0"
+  "version": "0.1.0"
 }
