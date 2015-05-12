@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v0.1.1 -  Monday, May 4th, 2015, 4:53:22 PM 
+sarine.viewer.svg - v0.1.1 -  Tuesday, May 12th, 2015, 11:04:17 AM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -29,7 +29,7 @@ sarine.viewer.svg - v0.1.1 -  Monday, May 4th, 2015, 4:53:22 PM
       defer = $.Deferred();
       $.getJSON(this.src + this.jsonFileName, function(data) {
         _t.data = data;
-        $(_t.element).load(_t.viewersBaseUrl + "atomic/" + _t.version + "/assets/" + _t.svg, function(data) {
+        return $(_t.element).load(_t.viewersBaseUrl + "atomic/" + _t.version + "/assets/" + _t.svg, function(data) {
           _t.element.find("#SVG_width_mm").text(parseFloat(_t.data.Width.mm).toFixed(2) + "mm");
           _t.element.find("#SVG_table_pre").text(parseFloat(_t.data["Table Size"].percentages) + "%");
           _t.element.find("#SVG_crown_pre").text(parseFloat(_t.data["Crown"]["height-percentages"]).toFixed(1) + "%");
@@ -43,9 +43,21 @@ sarine.viewer.svg - v0.1.1 -  Monday, May 4th, 2015, 4:53:22 PM
           _t.element.find("#SVG_pavillion_rounded").text(parseFloat(_t.data["Pavilion"]["angel-deg"]).toFixed(1) + "°");
           _t.element.find("#SVG_total_depth_per").text(parseFloat(_t.data["Total Depth"]["mm"]).toFixed(2) + "mm");
           _t.element.find("#SVG_total_depth_mm").text(parseFloat(_t.data["Total Depth"]["percentages"]) + "%");
-          return defer.resolve(_t).fail(function() {});
+          return defer.resolve(_t);
         });
-        return defer.resolve(_t);
+      }).fail(function() {
+        return _t.loadImage(_t.callbackPic).then(function(img) {
+          var canvas;
+          canvas = $("<canvas >");
+          canvas.attr({
+            "class": "no_stone",
+            "width": img.width,
+            "height": img.height
+          });
+          canvas[0].getContext("2d").drawImage(img, 0, 0, img.width, img.height);
+          _t.element.append(canvas);
+          return defer.resolve(_t);
+        });
       });
       return defer;
     };

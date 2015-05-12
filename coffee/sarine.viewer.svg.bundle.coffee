@@ -1,5 +1,5 @@
 ###!
-sarine.viewer.svg - v0.1.1 -  Monday, May 4th, 2015, 4:53:22 PM 
+sarine.viewer.svg - v0.1.1 -  Tuesday, May 12th, 2015, 11:04:17 AM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
 ###
 
@@ -65,9 +65,13 @@ class SarineSvg extends Viewer
 				_t.element.find("#SVG_total_depth_per").text(parseFloat(_t.data["Total Depth"]["mm"] ).toFixed(2)+ "mm")
 				_t.element.find("#SVG_total_depth_mm").text(parseFloat(_t.data["Total Depth"]["percentages"]) + "%")
 				defer.resolve(_t)
-				.fail ()->
-			defer.resolve(_t)
-
+		.fail ()->
+			_t.loadImage(_t.callbackPic).then (img)->
+				canvas = $("<canvas >")
+				canvas.attr({"class": "no_stone" ,"width": img.width, "height": img.height}) 
+				canvas[0].getContext("2d").drawImage(img, 0, 0, img.width, img.height)
+				_t.element.append(canvas)
+				defer.resolve(_t)
 		defer
 	full_init : ()-> 
 		defer = $.Deferred()
