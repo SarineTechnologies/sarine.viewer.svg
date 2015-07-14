@@ -1,5 +1,5 @@
 ###!
-sarine.viewer.svg - v1.1.0 -  Thursday, July 9th, 2015, 2:00:11 PM 
+sarine.viewer.svg - v1.1.0 -  Tuesday, July 14th, 2015, 3:38:17 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
 ###
 
@@ -53,9 +53,10 @@ class SarineSvg extends Viewer
 				arr = _t.svg.split('.')
 				arr.splice(1,0,stones[0].stoneProperties.shape)
 				_t.svg = arr.join('.')
+			SVG_width_mm = if stones[0].stoneProperties.shape == 'Round' then 'Diameter' else 'Width'
 			_t.data = data
 			$(_t.element).load _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg , (data)-> 
-				_t.element.find("#SVG_width_mm").text(parseFloat(_t.data.Width.mm ).toFixed(2)+ "mm") 
+				_t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm ).toFixed(2)+ "mm") 
 				_t.element.find("#SVG_table_pre").text(parseFloat(_t.data["Table Size"].percentages) + "%")
 				_t.element.find("#SVG_crown_pre").text(parseFloat(_t.data["Crown"]["height-percentages"]).toFixed(1) + "%")
 				_t.element.find("#SVG_crown_mm").text(parseFloat(_t.data["Crown"]["height-mm"] ).toFixed(2)+ "mm")
