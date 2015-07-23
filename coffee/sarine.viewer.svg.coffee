@@ -1,5 +1,5 @@
 ###!
-sarine.viewer.svg - v1.2.0 -  Tuesday, July 14th, 2015, 3:41:42 PM 
+sarine.viewer.svg - v1.2.0 -  Thursday, July 23rd, 2015, 12:12:31 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
 ###
 class SarineSvg extends Viewer
@@ -8,20 +8,21 @@ class SarineSvg extends Viewer
 		super(options)		
 		{@imagesArr,@jsonFileName,@svg} = options	   		
 		@version = $(@element).data("version") || "v1"
-		@viewersBaseUrl = stones[0].viewersBaseUrl
+		@viewersBaseUrl = options.baseUrl
+		@stopneProperties = options.stoneProperties
 
 	convertElement : () ->				
 		@element		
 
 	first_init : ()->
 		_t = @
-		defer = $.Deferred()
+		defer = $.Deferred() 
 		$.getJSON @src + @jsonFileName , (data) ->
-			if("Round" != stones[0].stoneProperties.shape)
-				arr = _t.svg.split('.')
-				arr.splice(1,0,stones[0].stoneProperties.shape)
+			if("Round" != _t.stopneProperties.shape)  
+				arr = _t.svg.split('.') 
+				arr.splice(1,0,_t.stopneProperties.shape.replace('Modified','')) 
 				_t.svg = arr.join('.')
-			SVG_width_mm = if stones[0].stoneProperties.shape == 'Round' then 'Diameter' else 'Width'
+			SVG_width_mm = if _t.stopneProperties.shape == 'Round' then 'Diameter' else 'Width'
 			_t.data = data
 			$(_t.element).load _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg , (data)-> 
 				_t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm ).toFixed(2)+ "mm") 

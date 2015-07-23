@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v1.2.0 -  Tuesday, July 14th, 2015, 3:41:42 PM 
+sarine.viewer.svg - v1.2.0 -  Thursday, July 23rd, 2015, 12:12:31 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -16,7 +16,8 @@ sarine.viewer.svg - v1.2.0 -  Tuesday, July 14th, 2015, 3:41:42 PM
       SarineSvg.__super__.constructor.call(this, options);
       this.imagesArr = options.imagesArr, this.jsonFileName = options.jsonFileName, this.svg = options.svg;
       this.version = $(this.element).data("version") || "v1";
-      this.viewersBaseUrl = stones[0].viewersBaseUrl;
+      this.viewersBaseUrl = options.baseUrl;
+      this.stopneProperties = options.stoneProperties;
     }
 
     SarineSvg.prototype.convertElement = function() {
@@ -29,12 +30,12 @@ sarine.viewer.svg - v1.2.0 -  Tuesday, July 14th, 2015, 3:41:42 PM
       defer = $.Deferred();
       $.getJSON(this.src + this.jsonFileName, function(data) {
         var SVG_width_mm, arr;
-        if ("Round" !== stones[0].stoneProperties.shape) {
+        if ("Round" !== _t.stopneProperties.shape) {
           arr = _t.svg.split('.');
-          arr.splice(1, 0, stones[0].stoneProperties.shape);
+          arr.splice(1, 0, _t.stopneProperties.shape.replace('Modified', ''));
           _t.svg = arr.join('.');
         }
-        SVG_width_mm = stones[0].stoneProperties.shape === 'Round' ? 'Diameter' : 'Width';
+        SVG_width_mm = _t.stopneProperties.shape === 'Round' ? 'Diameter' : 'Width';
         _t.data = data;
         return $(_t.element).load(_t.viewersBaseUrl + "atomic/" + _t.version + "/assets/" + _t.svg, function(data) {
           _t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm).toFixed(2) + "mm");
