@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v1.4.0 -  Tuesday, July 28th, 2015, 8:31:57 AM 
+sarine.viewer.svg - v1.4.0 -  Thursday, September 3rd, 2015, 12:11:26 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -90,13 +90,14 @@ sarine.viewer.svg - v1.4.0 -  Tuesday, July 28th, 2015, 8:31:57 AM
       _t = this;
       defer = $.Deferred();
       $.getJSON(this.src + this.jsonFileName, function(data) {
-        var SVG_width_mm, arr;
+        var SVG_width_mm, arr, stoneShape;
         if ("Round" !== _t.stoneProperties.shape) {
           arr = _t.svg.split('.');
           arr.splice(1, 0, _t.stoneProperties.shape.replace('Modified', ''));
           _t.svg = arr.join('.');
         }
-        SVG_width_mm = _t.stoneProperties.shape === 'Round' ? 'Diameter' : 'Width';
+        stoneShape = _t.stoneProperties.shape.replace('Modified', '');
+        SVG_width_mm = stoneShape === 'Round' ? 'Diameter' : 'Width';
         _t.data = data;
         return $(_t.element).load(_t.viewersBaseUrl + "atomic/" + _t.version + "/assets/" + _t.svg, function(data) {
           _t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm).toFixed(2) + "mm");
