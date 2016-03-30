@@ -1,5 +1,5 @@
 ###!
-sarine.viewer.svg - v1.6.0 -  Wednesday, March 30th, 2016, 8:47:02 AM 
+sarine.viewer.svg - v1.7.0 -  Wednesday, March 30th, 2016, 8:59:49 AM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
 ###
 
