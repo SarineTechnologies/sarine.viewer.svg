@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v1.6.0 -  Thursday, September 3rd, 2015, 3:39:57 PM 
+sarine.viewer.svg - v1.7.0 -  Wednesday, March 30th, 2016, 8:59:49 AM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -89,7 +89,8 @@ sarine.viewer.svg - v1.6.0 -  Thursday, September 3rd, 2015, 3:39:57 PM
       var defer, _t;
       _t = this;
       defer = $.Deferred();
-      $.getJSON(this.src + this.jsonFileName, function(data) {
+      this.fullSrc = this.src.indexOf('##FILE_NAME##') !== -1 ? this.src.replace('##FILE_NAME##', this.jsonFileName) : this.src + this.jsonFileName;
+      $.getJSON(this.fullSrc, function(data) {
         var SVG_width_mm, arr, stoneShape, ver;
         if ("Round" !== _t.stoneProperties.shape) {
           arr = _t.svg.split('.');
