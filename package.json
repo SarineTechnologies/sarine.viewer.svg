@@ -1,4 +1,11 @@
 {
+  "name": "sarine.viewer.svg",
+  "title": "sarine.viewer.svg",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SarineTechnologies/sarine.viewer.svg.git"
+  },
   "devDependencies": {
     "grunt-git-release": "^0.1.3",
     "grunt": "^0.4.5",
