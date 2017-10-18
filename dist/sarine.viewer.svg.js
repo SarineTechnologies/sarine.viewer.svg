@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v1.8.0 -  Thursday, September 28th, 2017, 3:14:24 PM 
+sarine.viewer.svg - v1.8.0 -  Wednesday, October 18th, 2017, 3:13:50 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -29,8 +29,9 @@ sarine.viewer.svg - v1.8.0 -  Thursday, September 28th, 2017, 3:14:24 PM
       _t = this;
       defer = $.Deferred();
       if (!this.src) {
-        this.failed();
-        defer.resolve(this);
+        this.failed().then()(function() {
+          return defer.resolve(this);
+        });
       } else {
         this.fullSrc = this.src.indexOf('##FILE_NAME##') !== -1 ? this.src.replace('##FILE_NAME##', this.jsonFileName) : this.src + this.jsonFileName;
         $.getJSON(this.fullSrc, function(data) {
@@ -61,8 +62,9 @@ sarine.viewer.svg - v1.8.0 -  Thursday, September 28th, 2017, 3:14:24 PM
             return defer.resolve(_t);
           });
         }).fail(function() {
-          _t.failed();
-          return defer.resolve(_t);
+          return _t.failed().then(function() {
+            return defer.resolve(_t);
+          });
         });
       }
       return defer;
@@ -76,9 +78,10 @@ sarine.viewer.svg - v1.8.0 -  Thursday, September 28th, 2017, 3:14:24 PM
     };
 
     SarineSvg.prototype.failed = function() {
-      var _t;
+      var defer, _t;
+      defer = $.Deferred();
       _t = this;
-      return _t.loadImage(_t.callbackPic).then(function(img) {
+      _t.loadImage(_t.callbackPic).then(function(img) {
         var canvas;
         canvas = $("<canvas >");
         canvas.attr({
@@ -87,8 +90,10 @@ sarine.viewer.svg - v1.8.0 -  Thursday, September 28th, 2017, 3:14:24 PM
           "height": img.height
         });
         canvas[0].getContext("2d").drawImage(img, 0, 0, img.width, img.height);
-        return _t.element.append(canvas);
+        _t.element.append(canvas);
+        return defer.resolve(_t);
       });
+      return defer;
     };
 
     SarineSvg.prototype.play = function() {};
