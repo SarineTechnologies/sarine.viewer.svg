@@ -1,6 +1,6 @@
 
 /*!
-sarine.viewer.svg - v1.8.0 -  Wednesday, October 18th, 2017, 3:13:50 PM 
+sarine.viewer.svg - v1.9.0 -  Wednesday, October 18th, 2017, 3:20:43 PM 
  The source code, name, and look and feel of the software are Copyright © 2015 Sarine Technologies Ltd. All Rights Reserved. You may not duplicate, copy, reuse, sell or otherwise exploit any portion of the code, content or visual design elements without express written permission from Sarine Technologies Ltd. The terms and conditions of the sarine.com website (http://sarine.com/terms-and-conditions/) apply to the access and use of this software.
  */
 
@@ -90,7 +90,7 @@ sarine.viewer.svg - v1.8.0 -  Wednesday, October 18th, 2017, 3:13:50 PM
       _t = this;
       defer = $.Deferred();
       if (!this.src) {
-        this.failed().then()(function() {
+        this.failed().then(function() {
           return defer.resolve(this);
         });
       } else {
