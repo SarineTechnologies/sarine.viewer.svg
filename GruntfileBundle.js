@@ -2,7 +2,6 @@
 module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt)
     var target = grunt.option('target') || "";
-    grunt
     grunt.initConfig({
         config: grunt.file.readJSON(target + "bower.json"),
         clean: {
@@ -123,7 +122,7 @@ module.exports = function(grunt) {
                 contents = contents.replace(/###!([\s\S]*?)###[\s\S]*?/gm, "");
             else {
 
-                contents = contents
+                contents = contents;
             }
             grunt.file.write(file, contents);
         });
