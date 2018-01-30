@@ -25,35 +25,27 @@ module.exports = function(grunt) {
         },
         concat: {
             coffee: {
-                options: {
-                    stripBanners: true,
-                    banner: '###!\n<%= config.name %> - v<%= config.version %> - ' +
-                        ' <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> ' + '\n ' + grunt.file.read("copyright.txt") + '\n###',
-                },
                 src: [target + 'coffee/<%= config.name %>.coffee'],
                 dest: target + 'coffee/<%= config.name %>.coffee',
             },
             coffeebundle: {
-                options: {
-                    stripBanners: true,
-                    banner: '###!\n<%= config.name %> - v<%= config.version %> - ' +
-                        ' <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> ' + '\n ' + grunt.file.read("copyright.txt") + '\n###\n',
-                },
                 src: [config.coreFiles , target + 'coffee/<%= config.name %>.bundle.coffee'],
                 dest: target + 'coffee/<%= config.name %>.bundle.coffee',
             }
         },
         uglify: {
             options: {
-                preserveComments: 'some'
+                preserveComments: 'some',
+                banner: '###!\n<%= config.name %> - v<%= config.version %> - ' +
+                        ' <%= grunt.template.today("dddd, mmmm dS, yyyy, h:MM:ss TT") %> ' + '\n ' + grunt.file.read("copyright.txt") + '\n###\n'
             },
             build: {
-                src: target + 'dist/<%= config.name %>.js',
-                dest: target + 'dist/<%= config.name %>.min.js'
+                src: config.dist.root + '/<%= config.name %>.js',
+                dest: config.dist.root + '/<%= config.name %>.min.js'
             },
             bundle: {
-                src: target + 'dist/<%= config.name %>.bundle.js',
-                dest: target + 'dist/<%= config.name %>.bundle.min.js'
+                src: config.dist.root + '/<%= config.name %>.bundle.js',
+                dest: config.dist.root + '/<%= config.name %>.bundle.min.js'
             }
         },
         coffeescript_concat: {
@@ -69,7 +61,7 @@ module.exports = function(grunt) {
                     join: true,
                     extDot: 'last'
                 },
-                dest: target + 'dist/<%= config.name %>.js',
+                dest: config.dist.root + '/<%= config.name %>.js',
                 src: [target + 'coffee/<%= config.name %>.coffee']
 
             },
@@ -78,23 +70,15 @@ module.exports = function(grunt) {
                     join: true,
                     extDot: 'last'
                 },
-                dest: target + 'dist/<%= config.name %>.bundle.js',
+                dest: config.dist.root + '/<%= config.name %>.bundle.js',
                 src: [target + 'coffee/<%= config.name %>.bundle.coffee']
 
             }
         },
         copy: {
             bundle: {
-                dest: target + 'dist/<%= config.name %>.config',
+                dest: config.dist.root + '/<%= config.name %>.config',
                 src: [target + '<%= config.name %>.config']
-            },
-            dist_root_files: {
-                files: [{
-                        cwd: 'dist/',
-                        src: '**',
-                        dest: config.dist.root,
-                        expand: true
-                    }]
             }
         }
     })
@@ -102,30 +86,16 @@ module.exports = function(grunt) {
         'clean:build',
         'clean:bundlecoffee',
         'coffeescript_concat',
-        'commentsCoffee:coffeeBundle',
         'concat:coffeebundle',
         'coffee:bundle',
-        'commentsCoffee:coffee',
         'concat:coffee',
         'coffee:build',
         'uglify',
         'clean:postbuild',
         'copyVersion',
-        'copy:bundle',
-        'copy:dist_root_files'
+        'copy:bundle'
     ]);
-    grunt.registerMultiTask('commentsCoffee', 'Remove comments from production code', function() {
-        this.files[0].src.forEach(function(file) {
-            var contents = grunt.file.read(file);
-            if (contents.match(/###!([\s\S]*?)###[\s\S]*?/gm))
-                contents = contents.replace(/###!([\s\S]*?)###[\s\S]*?/gm, "");
-            else {
 
-                contents = contents;
-            }
-            grunt.file.write(file, contents);
-        });
-    });
        grunt.registerTask('copyVersion' , 'copy version from package.json to sarine.viewer.clarity.config' , function (){
         var packageFile = grunt.file.readJSON(target + 'package.json');
         var configFileName = target + packageFile.name + '.config';
