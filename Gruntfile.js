@@ -80,7 +80,19 @@ module.exports = function(grunt) {
                 dest: config.dist.root + '/<%= config.name %>.config',
                 src: [target + '<%= config.name %>.config']
             }
-        }
+        },
+         watch: {
+                options: {
+                    interrupt: true
+                },
+                scripts: {
+                    files: [target + 'coffee/<%= config.name %>.coffee'],
+                    tasks: ['build'],
+                    options: {
+                        spawn: false,
+                    }
+                }
+            }
     })
     grunt.registerTask('build', [
         'clean:build',
@@ -96,6 +108,7 @@ module.exports = function(grunt) {
         'copy:bundle',
         'clean:bundlecoffee' //remove bundle.coffe file - not necessary
     ]);
+    grunt.registerTask('dev', ['build', 'watch']);
 
        grunt.registerTask('copyVersion' , 'copy version from package.json to sarine.viewer.clarity.config' , function (){
         var packageFile = grunt.file.readJSON(target + 'package.json');

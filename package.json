@@ -38,5 +38,9 @@
   },
   "engines": {
     "node": "6.9.0"
+  },
+   "scripts": {
+    "build": "npm install && grunt build",
+    "dev": "grunt dev"
   }
 }
