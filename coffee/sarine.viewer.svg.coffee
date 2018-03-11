@@ -14,6 +14,13 @@ class SarineSvg extends Viewer
 	first_init : ()->
 		_t = @   
 		defer = $.Deferred()
+		configArray = window.configuration.experiences.filter((i)-> return i.atom == 'cut2DView')
+		cut2DView = null
+		if (configArray.length > 0)
+			cut2DView = configArray[0]
+		if(cut2DView && cut2DView["customized"])
+			_t.svgCustomized = true;
+			_t.shapesArray = cut2DView["customized"].split(',');
 		
 		if !@src
 			@.failed().then( () -> 
@@ -30,7 +37,11 @@ class SarineSvg extends Viewer
 				SVG_width_mm = if stoneShape == 'Round' then 'Diameter' else 'Width'
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
-				$(_t.element).load _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver , (data)-> 
+				if(_t.svgCustomized && _t.shapesArray.find((item)-> return	item.toLowerCase() == stoneShape.toLowerCase()).length>0)
+					svgSrc = window.templateUrl+'/media/2DCut.'+stoneShape+".svg"
+				else	
+					svgSrc= _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver
+				$(_t.element).load svgSrc, (data)-> 
 					_t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm ).toFixed(2)+ "mm") 
 					_t.element.find("#SVG_table_pre").text(parseFloat(_t.data["Table Size"].percentages) + "%")
 					_t.element.find("#SVG_crown_pre").text(parseFloat(_t.data["Crown"]["height-percentages"]).toFixed(1) + "%")
