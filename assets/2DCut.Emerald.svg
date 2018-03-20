@@ -1,0 +1,99 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 538.5 275.4">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-1 {
+        stroke: #020202;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+        font-size: 16px;
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-3 {
+        stroke: #231f20;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <title>Emerald</title>
+  <g id="lines">
+    <line class="cls-1" x1="141.1" y1="45.3" x2="387.8" y2="45.3"/>
+    <line class="cls-1" x1="141.1" y1="42.7" x2="141.1" y2="47.8"/>
+    <line class="cls-1" x1="388.3" y1="42.5" x2="388.3" y2="47.9"/>
+    <g>
+      <line class="cls-1" x1="86.5" y1="17.4" x2="445" y2="17.4"/>
+      <line class="cls-1" x1="445.2" y1="13.4" x2="445.2" y2="21"/>
+      <line class="cls-1" x1="86.4" y1="13.4" x2="86.4" y2="20.9"/>
+    </g>
+    <g>
+      <line class="cls-1" x1="75.1" y1="63.3" x2="75.1" y2="242"/>
+      <line class="cls-1" x1="73" y1="63.3" x2="77" y2="63.3"/>
+      <line class="cls-1" x1="72.9" y1="242.2" x2="77" y2="242.2"/>
+    </g>
+    <g>
+      <line class="cls-1" x1="470.8" y1="63.3" x2="470.8" y2="100.1"/>
+      <line class="cls-1" x1="468.9" y1="63.3" x2="472.5" y2="63.3"/>
+      <line class="cls-1" x1="468.8" y1="100.1" x2="472.5" y2="100.1"/>
+    </g>
+    <g>
+      <line class="cls-1" x1="470.9" y1="107.9" x2="470.9" y2="243.7"/>
+      <line class="cls-1" x1="468.8" y1="107.6" x2="472.9" y2="107.6"/>
+      <line class="cls-1" x1="468.7" y1="243.8" x2="472.9" y2="243.8"/>
+    </g>
+    <g>
+      <line class="cls-1" x1="440.7" y1="84.9" x2="461.5" y2="100"/>
+      <line class="cls-1" x1="455.8" y1="100" x2="461.5" y2="100"/>
+    </g>
+    <line class="cls-1" x1="70" y1="96.4" x2="75.3" y2="100.1"/>
+    <line class="cls-1" x1="70.3" y1="111.4" x2="75.1" y2="106.8"/>
+    <g>
+      <line class="cls-1" x1="440.7" y1="125.5" x2="461.5" y2="107.6"/>
+      <line class="cls-1" x1="455.8" y1="107.6" x2="461.5" y2="107.6"/>
+    </g>
+  </g>
+  <g id="text">
+    <text class="cls-2" id="SVG_culet_mm" transform="translate(246.1 270.2)">0.0%</text>
+    <text class="cls-2" id="SVG_crown_rounded" transform="translate(434.9 72.9)">0.0°</text>
+    <text class="cls-2" id="SVG_pavillion_rounded" transform="translate(436.9 149.2)">0.0°</text>
+    <g id="Pavillion">
+      <text class="cls-2" id="SVG_pavillion_pre" transform="translate(480.7 236.1)">0.0%</text>
+      <text class="cls-2" id="SVG_pavillion_mm" transform="translate(480.7 205.7)">0.00mm</text>
+    </g>
+    <g id="Crown">
+      <text class="cls-2" id="SVG_crown_mm" transform="translate(479.7 90.6)">0.00mm</text>
+      <text class="cls-2" id="SVG_crown_pre" transform="translate(479.7 72.9)">0.0%</text>
+    </g>
+    <g id="Total">
+      <text class="cls-2" id="SVG_total_depth_per" transform="translate(0 236.1)">0.0%</text>
+      <text class="cls-2" id="SVG_total_depth_mm" transform="translate(0 211.8)">0.00mm</text>
+    </g>
+    <g id="Girdle">
+      <text class="cls-2" id="SVG_girdle_mm" transform="translate(0 126.7)">0.00mm</text>
+      <text class="cls-2" id="SVG_girdle_pre" transform="translate(0 87.6)">0.0%</text>
+    </g>
+    <g id="Table">
+      <text class="cls-2" id="SVG_table_pre" transform="translate(245.1 42.1)">0.0%</text>
+      <text class="cls-2" id="SVG_width_mm" transform="translate(238.8 13.7)">0.00mm</text>
+    </g>
+  </g>
+  <g id="emerald">
+    <g>
+      <rect class="cls-3" x="80.5" y="100.1" width="366.7" height="6.67"/>
+      <polygon class="cls-3" points="212.7 242.2 314.7 242.2 348.2 211.7 398.9 169.1 447.2 106.8 447.2 100.1 436.9 87.4 416.3 69.4 387.3 63.3 140 63.2 111.6 69.7 90.1 87.4 80.5 100.1 80.5 106.8 129.3 169.1 179 211.8 212.7 242.2"/>
+      <line class="cls-3" x1="111.6" y1="69.7" x2="416.3" y2="69.7"/>
+      <line class="cls-3" x1="90.1" y1="87.4" x2="436.9" y2="87.4"/>
+      <line class="cls-3" x1="129.3" y1="169.1" x2="398.9" y2="169.1"/>
+      <line class="cls-3" x1="179" y1="211.8" x2="348.2" y2="211.7"/>
+      <polyline class="cls-3" points="314.7 242.2 339.2 211.7 371 169.1 404 107.1 404 100.1 401.6 87.6 390.8 69.6 387.3 63.3"/>
+      <polyline class="cls-3" points="212.8 242.2 188.3 211.7 156.6 169.1 123.4 107.1 123.4 100.1 125.9 87.6 136.7 69.6 140.2 63.3"/>
+    </g>
+  </g>
+</svg>
