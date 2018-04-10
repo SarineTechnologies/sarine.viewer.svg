@@ -29,7 +29,7 @@ class SarineSvg extends Viewer
 				SVG_width_mm = if stoneShape == 'Round' then 'Diameter' else 'Width'
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
-				$(_t.element).load _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver , (data)-> 
+				$(_t.element).load _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/svg/" + _t.svg + ver , (data)-> 
 					_t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm ).toFixed(2)+ "mm") 
 					_t.element.find("#SVG_table_pre").text(parseFloat(_t.data["Table Size"].percentages) + "%")
 					_t.element.find("#SVG_crown_pre").text(parseFloat(_t.data["Crown"]["height-percentages"]).toFixed(1) + "%")
