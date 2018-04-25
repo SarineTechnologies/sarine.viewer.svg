@@ -43,6 +43,7 @@ class SarineSvg extends Viewer
 					svgSrc= _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver
 				$(_t.element).load svgSrc, (data)-> 
 				
+					$( "text[id^='SVG_']" ).text ""	
 					for key of _t.data 
 						obj = _t.data[key]
 						for prop of obj
@@ -57,6 +58,7 @@ class SarineSvg extends Viewer
 										value = if trim then value.toString().substring(0,value.toString().indexOf(".")+1+trim)  else if round != undefined then parseFloat(value).toFixed(round) else parseFloat(value).toFixed(2)
 									value = if suffix then value+suffix else value
 									elem.text value
+							
 					defer.resolve(_t)
 			.fail ()->
 				_t.failed().then( () -> 
