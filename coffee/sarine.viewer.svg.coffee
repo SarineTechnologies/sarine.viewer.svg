@@ -37,7 +37,7 @@ class SarineSvg extends Viewer
 				SVG_width_mm = if stoneShape == 'Round' then 'Diameter' else 'Width'
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
-				shapeExist=_t.shapesArray.find((item)-> return	item.toLowerCase() == stoneShape.toLowerCase())
+				shapeExist= _t.shapesArray && _t.shapesArray.find((item)-> return	item.toLowerCase() == stoneShape.toLowerCase())
 				if(_t.svgCustomized && shapeExist&& shapeExist.length>0)
 					svgSrc = window.templateUrl+'/media/2DCut.'+stoneShape+".svg"
 				else	
