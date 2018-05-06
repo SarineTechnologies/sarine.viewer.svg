@@ -40,7 +40,7 @@ class SarineSvg extends Viewer
 				shapeExist = if _t.shapesArray then _t.shapesArray.find((item)-> return	item.toLowerCase() == stoneShape.toLowerCase()) else null
 				
 				if(_t.svgCustomized && shapeExist && shapeExist.length>0)
-					svgSrc = window.templateUrl+'/media/2DCut.'+shapeExist+".svg"
+					svgSrc = window.templateUrl + '/media/2DCut.' + shapeExist + ".svg" + ver
 				else	
 					svgSrc= _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver
 				$(_t.element).load svgSrc, (data)-> 
