@@ -33,11 +33,10 @@ class SarineSvg extends Viewer
 					arr = _t.svg.split('.') 
 					arr.splice(1,0,_t.stoneProperties.shape.replace('Modified','')) 
 					_t.svg = arr.join('.')
-				stoneShape = _t.stoneProperties.shape.replace('Modified','')
-				SVG_width_mm = if stoneShape == 'Round' then 'Diameter' else 'Width'
+
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
-				shapeExist = if _t.shapesArray then _t.shapesArray.find((item)-> return	item.toLowerCase() == stoneShape.toLowerCase()) else null
+				shapeExist = if _t.shapesArray then _t.shapesArray.find((item)-> return	item.toLowerCase() == _t.stoneProperties.shape.toLowerCase()) else null
 				
 				if(_t.svgCustomized && shapeExist && shapeExist.length>0)
 					svgSrc = window.templateUrl + '/media/2DCut.' + shapeExist + ".svg" + ver
