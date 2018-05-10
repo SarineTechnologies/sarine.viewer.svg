@@ -21,5 +21,13 @@ $targetPathWithoutEnvPrefix = "content/viewers/atomic/v1/js"
 Write-Output "Creating s3 site..."
 & "$env:ModulesPath\s3sync.ps1" -EnvName $envName -envId $envId -envType $envType -WebSiteFolder $iisAppName -targetPathWithoutEnvPrefix $targetPathWithoutEnvPrefix -maxAge 31536000
 
+if($envType -eq "prod"){
+	$siteUri = "http://viewer-api.sarine.com/cache/v2/atom/sarine.viewer.svg"
+}
+else{
+	$siteUri = "http://viewer-api-$envId.$envType.sarine.com/cache/v2/atom/sarine.viewer.svg"
+}
+
+Invoke-WebRequest -Uri  $siteUri -UseBasicParsing
 Write-Output "Completed Successfully"
 #Stop-Transcript
