@@ -1,4 +1,3 @@
-
 class SarineSvg extends Viewer
 	
 	constructor: (options) -> 			
@@ -14,13 +13,6 @@ class SarineSvg extends Viewer
 	first_init : ()->
 		_t = @   
 		defer = $.Deferred()
-		configArray = window.configuration.experiences.filter((i)-> return i.atom == 'cut2DView')
-		cut2DView = null
-		if (configArray.length > 0)
-			cut2DView = configArray[0]
-		if(cut2DView && cut2DView["customized"])
-			_t.svgCustomized = true;
-			_t.shapesArray = cut2DView["customized"].split(',');
 		
 		if !@src
 			@.failed().then( () -> 
@@ -36,6 +28,7 @@ class SarineSvg extends Viewer
 
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
+
 				shapeExist = if _t.shapesArray then _t.shapesArray.find((item)-> return	item.toLowerCase() == _t.stoneProperties.shape.toLowerCase()) else null
 				
 				if(_t.svgCustomized && shapeExist && shapeExist.length>0)
@@ -59,6 +52,7 @@ class SarineSvg extends Viewer
 										value = if trim then value.toString().substring(0,value.toString().indexOf(".")+1+trim)  else if round != undefined then parseFloat(value).toFixed(round) else parseFloat(value).toFixed(2)
 									value = if suffix then value+suffix else value
 									elem.text value						
+
 					defer.resolve(_t)
 			.fail ()->
 				_t.failed().then( () -> 
@@ -83,4 +77,3 @@ class SarineSvg extends Viewer
 	stop : () -> return
 
 @SarineSvg = SarineSvg
-		
