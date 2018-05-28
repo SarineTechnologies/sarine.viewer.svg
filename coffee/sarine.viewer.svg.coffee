@@ -25,24 +25,34 @@ class SarineSvg extends Viewer
 					arr = _t.svg.split('.') 
 					arr.splice(1,0,_t.stoneProperties.shape.replace('Modified','')) 
 					_t.svg = arr.join('.')
-				stoneShape = _t.stoneProperties.shape.replace('Modified','')
-				SVG_width_mm = if stoneShape == 'Round' then 'Diameter' else 'Width'
+
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
-				$(_t.element).load _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/svg/" + _t.svg + ver , (data)-> 
-					_t.element.find("#SVG_width_mm").text(parseFloat(_t.data[SVG_width_mm].mm ).toFixed(2)+ "mm") 
-					_t.element.find("#SVG_table_pre").text(parseFloat(_t.data["Table Size"].percentages) + "%")
-					_t.element.find("#SVG_crown_pre").text(parseFloat(_t.data["Crown"]["height-percentages"]).toFixed(1) + "%")
-					_t.element.find("#SVG_crown_mm").text(parseFloat(_t.data["Crown"]["height-mm"] ).toFixed(2)+ "mm")
-					_t.element.find("#SVG_pavillion_pre").text(parseFloat(_t.data["Pavilion"]["height-percentages"]).toFixed(1) + "%")
-					_t.element.find("#SVG_pavillion_mm").text(parseFloat(_t.data["Pavilion"]["height-mm"] ).toFixed(2)+ "mm") 
-					_t.element.find("#SVG_girdle_pre").text(parseFloat(_t.data["Girdle"]["Thickness-percentages"]).toFixed(1) + "%")
-					_t.element.find("#SVG_girdle_mm").text(parseFloat(_t.data["Girdle"]["Thickness-mm"] ).toFixed(2)+ "mm")
-					_t.element.find("#SVG_culet_mm").text(parseFloat(_t.data["Culet Size"].percentages) + "%" )
-					_t.element.find("#SVG_crown_rounded").text(parseFloat(_t.data["Crown"]["angel-deg"]).toFixed(1) + "°")
-					_t.element.find("#SVG_pavillion_rounded").text(parseFloat(_t.data["Pavilion"]["angel-deg"]).toFixed(1) + "°")
-					_t.element.find("#SVG_total_depth_per").text(parseFloat(_t.data["Total Depth"]["mm"] ).toFixed(2)+ "mm")
-					_t.element.find("#SVG_total_depth_mm").text(parseFloat(_t.data["Total Depth"]["percentages"]) + "%")
+
+				shapeExist = if _t.shapesArray then _t.shapesArray.find((item)-> return	item.toLowerCase() == _t.stoneProperties.shape.toLowerCase()) else null
+				
+				if(_t.svgCustomized && shapeExist && shapeExist.length>0)
+					svgSrc = window.templateUrl + '/media/2DCut.' + shapeExist + ".svg" + ver
+				else	
+					svgSrc= _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver
+				$(_t.element).load svgSrc, (data)-> 
+				
+					$( "text[id^='SVG_']" ).text ""	
+					for key of _t.data 
+						obj = _t.data[key]
+						for prop of obj
+							if(obj.hasOwnProperty(prop))
+							    elem = _t.element.find("#SVG_"+key.replace(" ","_")+"_"+prop.replace(" ","_"))
+								if elem.length>0
+									trim = elem.data "trimming"
+									round = elem.data "rounding"
+									suffix = elem.data "suffix"
+									value=obj[prop]
+									if $.isNumeric(value)
+										value = if trim then value.toString().substring(0,value.toString().indexOf(".")+1+trim)  else if round != undefined then parseFloat(value).toFixed(round) else parseFloat(value).toFixed(2)
+									value = if suffix then value+suffix else value
+									elem.text value						
+
 					defer.resolve(_t)
 			.fail ()->
 				_t.failed().then( () -> 
