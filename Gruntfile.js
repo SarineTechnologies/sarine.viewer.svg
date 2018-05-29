@@ -145,7 +145,7 @@ module.exports = function(grunt) {
 
             return {
                 root: '../../../dist/content/viewers/atomic/v1/js/',
-                assets :'../../../dist/content/viewers/atomic/v1/assets/'
+                assets :'../../../dist/content/viewers/atomic/v1/assets/svg/'
             }
         }
     }
