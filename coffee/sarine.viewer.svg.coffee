@@ -6,6 +6,7 @@ class SarineSvg extends Viewer
 		@version = $(@element).data("version") || "v1"
 		@viewersBaseUrl = options.baseUrl
 		@stoneProperties = options.stoneProperties
+		@atomVersion = options.atomVersion
 
 	convertElement : () ->				
 		@element		
@@ -28,13 +29,13 @@ class SarineSvg extends Viewer
 
 				_t.data = data			
 				ver = window.cacheVersion || '?1'
-
+				
 				shapeExist = if _t.shapesArray then _t.shapesArray.find((item)-> return	item.toLowerCase() == _t.stoneProperties.shape.toLowerCase()) else null
 				
 				if(_t.svgCustomized && shapeExist && shapeExist.length>0)
 					svgSrc = window.templateUrl + '/media/2DCut.' + shapeExist + ".svg" + ver
 				else	
-					svgSrc= _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/" + _t.svg + ver
+					svgSrc= _t.viewersBaseUrl + "atomic/" + _t.version  + "/assets/svg/" + _t.svg + "?v="+ _t.atomVersion 
 				$(_t.element).load svgSrc, (data)-> 
 				
 					$( "text[id^='SVG_']" ).text ""	
