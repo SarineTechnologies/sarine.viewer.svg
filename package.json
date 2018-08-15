@@ -40,7 +40,7 @@
     "node": "6.9.0"
   },
    "scripts": {
-    "build": "npm install && grunt build",
+    "build": "grunt build",
     "dev": "grunt dev"
   }
 }
