@@ -7,7 +7,7 @@
     "url": "https://github.com/SarineTechnologies/sarine.viewer.svg.git"
   },
   "dependencies": {
-    "sarine.viewer": "https://github.com/SarineTechnologies/sarine.viewer.git#dev"    
+    "sarine.viewer": "https://github.com/SarineTechnologies/sarine.viewer.git#dev"
   },
   "devDependencies": {
     "grunt-git-release": "^0.1.3",
@@ -36,10 +36,7 @@
     "install": "^0.1.8",
     "load-grunt-tasks": "^3.1.0"
   },
-  "engines": {
-    "node": "6.9.0"
-  },
-   "scripts": {
+  "scripts": {
     "build": "grunt build",
     "dev": "grunt dev"
   }
