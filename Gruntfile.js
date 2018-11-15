@@ -136,7 +136,7 @@ module.exports = function(grunt) {
 
             return {
                 root: 'app/dist/',
-                assets : 'app/assets/svg'
+                assets : 'app/assets/'
             }
         }
         else
