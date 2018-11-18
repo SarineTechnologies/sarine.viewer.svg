@@ -14,6 +14,14 @@ class SarineSvg extends Viewer
 	first_init : ()->
 		_t = @   
 		defer = $.Deferred()
+
+		configArray = window.configuration.experiences.filter((i)-> return i.atom == 'cut2DView')
+		cut2DView = null
+		if (configArray.length > 0)
+			cut2DView = configArray[0]
+		if(cut2DView && cut2DView["customized"])
+			_t.svgCustomized = true;
+			_t.shapesArray = cut2DView["customized"].split(',');
 		
 		if !@src
 			@.failed().then( () -> 
