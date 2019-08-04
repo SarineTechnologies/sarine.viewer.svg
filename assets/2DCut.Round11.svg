@@ -1,157 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 576.4 327.8" style="enable-background:new 0 0 576.4 327.8;" xml:space="preserve">
+	 viewBox="0 0 651 360.6" style="enable-background:new 0 0 651 360.6;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#020202;stroke-width:2;stroke-miterlimit:10;}
-	.st1{font-family:'ArialMT';}
-	.st2{font-size:14px;}
-	.st3{enable-background:new    ;}
-	.st4{font-size:16px;}
-	.st5{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#7F7F7F;stroke-width:2;stroke-miterlimit:10;}
+	.st2{font-family:'ArialMT';}
+	.st3{font-size:21px;}
+	.st4{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
-<title>Round</title>
-<g id="lines">
-	<line class="st0" x1="188.2" y1="50.2" x2="392.1" y2="50.2"/>
-	<line class="st0" x1="188.2" y1="48.2" x2="188.2" y2="52.1"/>
-	<line class="st0" x1="392.6" y1="48" x2="392.6" y2="52.3"/>
-	<g>
-		<line class="st0" x1="110.2" y1="24.9" x2="468.6" y2="24.9"/>
-		<line class="st0" x1="468.9" y1="21.2" x2="468.9" y2="28.1"/>
-		<line class="st0" x1="110.1" y1="21.2" x2="110.1" y2="28"/>
-	</g>
-	<g>
-		<line class="st0" x1="98.8" y1="63.5" x2="98.8" y2="295.2"/>
-		<line class="st0" x1="96.7" y1="63.5" x2="100.7" y2="63.5"/>
-		<line class="st0" x1="96.6" y1="295.4" x2="100.7" y2="295.4"/>
-	</g>
-	<g>
-		<line class="st0" x1="494.4" y1="62.5" x2="494.4" y2="123.6"/>
-		<line class="st0" x1="492.3" y1="62.5" x2="496.4" y2="62.5"/>
-		<line class="st0" x1="492.1" y1="123.6" x2="496.4" y2="123.6"/>
-	</g>
-	<g>
-		<line class="st0" x1="494.5" y1="137.5" x2="494.5" y2="295.5"/>
-		<line class="st0" x1="492.5" y1="137.2" x2="496.4" y2="137.2"/>
-		<line class="st0" x1="492.4" y1="295.6" x2="496.4" y2="295.6"/>
-	</g>
-	<g>
-		<line class="st0" x1="465.4" y1="109.8" x2="486.1" y2="123.6"/>
-		<line class="st0" x1="480.4" y1="123.6" x2="486.1" y2="123.6"/>
-	</g>
-	<g>
-		<line class="st0" x1="465.4" y1="153.5" x2="486.1" y2="137.2"/>
-		<line class="st0" x1="480.4" y1="137.2" x2="486.1" y2="137.2"/>
-	</g>
-	<g>
-		<line class="st0" x1="537.8" y1="131.2" x2="476.8" y2="131.2"/>
-		<line class="st0" x1="537.8" y1="129" x2="537.8" y2="133.2"/>
-		<line class="st0" x1="476.8" y1="128.9" x2="476.8" y2="133.2"/>
-	</g>
-</g>
-<g id="text">
-	<g>
-		<text id="SVG_Culet_Size_percentages" data-rounding="1" data-suffix="%" transform="matrix(1 0 0 1 311.5014 315.6)" class="st1 st2">0.0%</text>
-	</g>
-	<text id="text_SVG_Culet_Size_percentages_1_" transform="matrix(1 0 0 1 244.0504 315.6)" class="st1 st2">Culet Size</text>
-	<g>
-		<text id="SVG_Crown_angel-deg" data-rounding="1"  data-suffix="°"  transform="matrix(1 0 0 1 442.1017 86.6001)" class="st1 st2">0.0°</text>
-	</g>
-	<g id="Crown">
-		<text id="text_SVG_Crown_height-percentages_3" transform="matrix(1 0 0 1 504.1014 72.5)" class="st3"><tspan x="0" y="0" class="st1 st2">Crown</tspan><tspan x="0" y="14" class="st1 st2">Height</tspan></text>
-	</g>
-	<g id="Crown_4_">
-		<text id="SVG_Crown_height-mm"  data-rounding="2"  data-suffix="mm"  transform="matrix(1 0 0 1 504.1014 120.6501)" class="st1 st2">0.00mm</text>
-		<text  id="SVG_Crown_height-percentages"  data-rounding="1"  data-suffix="%"  transform="matrix(1 0 0 1 504.1014 102.9501)" class="st1 st2">0.0%</text>
-	</g>
-	<g id="Crown_3_">
-		<text id="text_SVG_Crown_height-percentages_3_" transform="matrix(1 0 0 1 43.3015 72.5)" class="st3"><tspan x="0" y="0" class="st1 st2">Total</tspan><tspan x="0" y="14" class="st1 st2">Depht</tspan></text>
-	</g>
-	<g id="Crown_1_">
-		<text id="SVG_Total_Depth_mm" data-rounding="2" data-suffix="mm" transform="matrix(1 0 0 1 43.3015 120.6501)" class="st1 st2">0.00mm</text>
-		<text id="SVG_Total_Depth_percentages" data-rounding="1" data-suffix="%" transform="matrix(1 0 0 1 43.3015 102.9501)" class="st1 st2">0.0%</text>
-	</g>
-	<g id="Crown_5_">
-		<text id="SVG_Girdle_Thickness-mm" data-rounding="2" data-suffix="mm"  transform="matrix(1 0 0 1 505.1014 195.5)" class="st1 st2">0.00mm</text>
-		<text  id="SVG_Girdle_Thickness-percentages" data-rounding="1"  data-suffix="%" transform="matrix(1 0 0 1 505.1014 177.8)" class="st1 st2">0.0%</text>
-	</g>
-	<g id="Crown_2_">
-		<text id="text_SVG_Crown_height-percentages_2_" transform="matrix(1 0 0 1 504.1014 147.1501)" class="st3"><tspan x="0" y="0" class="st1 st2">Girdle </tspan><tspan x="0" y="16.8" class="st1 st2">Thickness</tspan></text>
-	</g>
-	<g id="Crown_8_">
-		<text id="SVG_Pavilion_height-mm" data-rounding="2" data-suffix="mm" transform="matrix(1 0 0 1 505.1014 294.1498)" class="st1 st2">0.00mm</text>
-		<text id="SVG_Pavilion_height-percentages" data-rounding="1" data-suffix="%"  transform="matrix(1 0 0 1 505.1014 276.4498)" class="st1 st2">0.0%</text>
-	</g>
-	<g id="Crown_7_">
-		<text id="text_SVG_Crown_height-percentages_7_" transform="matrix(1 0 0 1 504.1014 245.7999)" class="st3"><tspan x="0" y="0" class="st1 st2">Pavilion </tspan><tspan x="0" y="16.8" class="st1 st2">Depth</tspan></text>
-	</g>
-	<g id="Table">
+<g>
+	<title>Round</title>
+	<g id="lines">
+		<line class="st0" x1="182.6" y1="61.8" x2="386.5" y2="61.8"/>
+		<line class="st0" x1="182.6" y1="59.8" x2="182.6" y2="63.7"/>
+		<line class="st0" x1="387" y1="59.6" x2="387" y2="63.9"/>
 		<g>
-			<text id="text_SVG_Table_Size_percentages_1_" transform="matrix(1 0 0 1 231.4658 46.3)" class="st1 st4">Tabel size</text>
-			<text id="SVG_Table_Size_percentages"  data-rounding="0"  data-suffix="%"  transform="matrix(1 0 0 1 308.4658 46.3)" class="st1 st4">0.0%</text>
+			<line class="st0" x1="104.6" y1="36.5" x2="463" y2="36.5"/>
+			<line class="st0" x1="463.3" y1="32.8" x2="463.3" y2="39.7"/>
+			<line class="st0" x1="104.5" y1="32.8" x2="104.5" y2="39.6"/>
 		</g>
-		<text id="SVG_Diameter_mm"  data-rounding="2"  data-suffix="mm"  transform="matrix(1 0 0 1 293.2014 17.9)" class="st1 st4">0.00mm</text>
-		<text id="text_SVG_Diameter_mm_1_" transform="matrix(1 0 0 1 221.6503 17.9)" class="st1 st4">Diameter</text>
+		<g>
+			<line class="st0" x1="93.2" y1="85.1" x2="93.2" y2="316.8"/>
+			<line class="st0" x1="91.1" y1="85.1" x2="95.1" y2="85.1"/>
+			<line class="st0" x1="91" y1="317" x2="95.1" y2="317"/>
+		</g>
+		<g>
+			<line class="st0" x1="540.8" y1="84.1" x2="540.8" y2="145.2"/>
+			<line class="st0" x1="486.7" y1="84.1" x2="490.8" y2="84.1"/>
+			<line class="st0" x1="538.5" y1="145.2" x2="542.8" y2="145.2"/>
+		</g>
+		<g>
+			<line class="st0" x1="540.9" y1="159.1" x2="540.9" y2="317.1"/>
+			<line class="st0" x1="538.9" y1="158.8" x2="542.8" y2="158.8"/>
+			<line class="st0" x1="538.8" y1="317.2" x2="542.8" y2="317.2"/>
+		</g>
+		<g>
+			<line class="st0" x1="459.8" y1="131.4" x2="480.5" y2="145.2"/>
+			<line class="st0" x1="474.8" y1="145.2" x2="480.5" y2="145.2"/>
+		</g>
+		<g>
+			<line class="st0" x1="459.8" y1="175.1" x2="480.5" y2="158.8"/>
+			<line class="st0" x1="474.8" y1="158.8" x2="480.5" y2="158.8"/>
+		</g>
+		<g>
+			<line class="st1" x1="541.2" y1="152.8" x2="471.2" y2="152.8"/>
+			<line class="st0" x1="540.9" y1="150.7" x2="540.9" y2="154.9"/>
+			<line class="st0" x1="471.2" y1="150.5" x2="471.2" y2="154.8"/>
+		</g>
 	</g>
-	<g id="Crown_6_">
-		<text id="text_SVG_Crown_height-percentages_6_" transform="matrix(1 0 0 1 410.5103 73.1998)" class="st1 st2">Crown Angle</text>
+	<g id="text">
+		<g>
+			<g id="TSVG_Culet_Size_percentages">
+				<g>
+					<text id="SVG_Culet_Size_percentages" data-rounding="1" data-suffix="%"  transform="matrix(1 0 0 1 313.6164 346.2)" class="st2 st3">0.0%</text>
+				</g>
+			</g>
+			<g >
+				<text transform="matrix(1 0 0 1 213.1654 346.2)" class="st2 st3">Culet Size</text>
+			</g>
+		</g>
+		<g >
+			<g>
+				<text id="SVG_Crown_angel-deg" data-rounding="1" data-suffix="°" transform="matrix(1 0 0 1 455.938 107.2001)" class="st2 st3">0.0°</text>
+			</g>
+		</g>
+		<g id="Crown_3_">
+			<g>
+				<text transform="matrix(1 0 0 1 37.0545 258.1)" class="st2 st3">Total</text>
+				<text transform="matrix(1 0 0 1 27.7029 276.1)" class="st2 st3">Depht</text>
+			</g>
+		</g>
+		<g id="Crown_1_">
+			<g>
+				<text id="SVG_Total_Depth_mm" data-rounding="2" data-suffix="mm"  transform="matrix(1 0 0 1 7.8821 318.2501)" class="st2 st3">0.00mm</text>
+				<text id="SVG_Total_Depth_percentages" data-rounding="1" data-suffix="%" transform="matrix(1 0 0 1 30.8753 300.5501)" class="st2 st3">0.0%</text>
+			</g>
+		</g>
+		<g id="Crown_22_">
+			<g>
+				<text transform="matrix(1 0 0 1 549.5408 258.1)" class="st2 st3">Pavilion </text>
+				<text transform="matrix(1 0 0 1 549.5408 276.1)" class="st2 st3">Depht</text>
+			</g>
+		</g>
+		<g id="Crown_10_">
+			<g>
+				<text id="SVG_Pavilion_height-mm" data-rounding="2" data-suffix="mm" transform="matrix(1 0 0 1 549.5408 318.2501)" class="st2 st3">0.00mm</text>
+				<text id="SVG_Pavilion_height-percentages" data-rounding="1" data-suffix="%"  transform="matrix(1 0 0 1 549.5408 300.5501)" class="st2 st3">0.0%</text>
+			</g>
+		</g>
+		<g id="Crown_21_">
+			<g>
+				<text transform="matrix(1 0 0 1 549.5408 170.8748)" class="st2 st3">Girdle </text>
+				<text transform="matrix(1 0 0 1 549.5408 188.8748)" class="st2 st3">Thickness</text>
+			</g>
+		</g>
+		<g id="Crown_8_">
+			<g>
+				<text id="SVG_Girdle_Thickness-mm" data-rounding="2" data-suffix="mm"  transform="matrix(1 0 0 1 549.5408 231.0249)" class="st2 st3">0.00mm</text>
+				<text id="SVG_Girdle_Thickness-percentages" data-rounding="1" data-suffix="%"  transform="matrix(1 0 0 1 549.5408 213.3249)" class="st2 st3">0.0%</text>
+			</g>
+		</g>
+		<g id="Crown_16_">
+			<g>
+				<text transform="matrix(1 0 0 1 549.5408 86.125)" class="st2 st3">Crown</text>
+				<text transform="matrix(1 0 0 1 549.5408 104.125)" class="st2 st3">Height</text>
+			</g>
+		</g>
+		<g id="Crown_2_">
+			<g>
+				<text id="SVG_Crown_height-mm" data-rounding="2" data-suffix="mm"  transform="matrix(1 0 0 1 549.5408 146.2752)" class="st2 st3">0.00mm</text>
+				<text id="SVG_Crown_height-percentages" data-rounding="1" data-suffix="%"  transform="matrix(1 0 0 1 549.5408 128.5751)" class="st2 st3">0.0%</text>
+			</g>
+		</g>
+		<g id="Table">
+			<g>
+				<g>
+					<text id="TSVG_Table_Size_percentages_17_" transform="matrix(1 0 0 1 210.9346 57.9)" class="st2 st3">Tabel size</text>
+					<text id="SVG_Table_Size_percentages" data-rounding="0" data-suffix="%"  transform="matrix(1 0 0 1 309.9346 57.9)" class="st2 st3">0.0%</text>
+				</g>
+				<g>
+					<text id="SVG_Diameter_mm" data-rounding="2" data-suffix="mm"  transform="matrix(1 0 0 1 294.6702 29.5)" class="st2 st3">0.00mm</text>
+					<text id="TSVG_Diameter_mm_16_" transform="matrix(1 0 0 1 204.1191 29.5)" class="st2 st3">Diameter</text>
+				</g>
+			</g>
+		</g>
+		<g id="Crown_6_">
+			<g>
+				<text id="TSVG_Crown_height-percentages_19_" transform="matrix(1 0 0 1 415.1987 85.7998)" class="st2 st3">Crown Angle</text>
+			</g>
+		</g>
+		<g id="TSVG_Crown_angel-deg_1_">
+			<g>
+				<text id="SVG_Pavilion_angel-deg" data-rounding="1" data-suffix="°"  transform="matrix(1 0 0 1 463.9378 247.3002)" class="st2 st3">0.0°</text>
+			</g>
+		</g>
+		<g id="Crown_9_">
+			<g>
+				<text transform="matrix(1 0 0 1 441.0456 210.9495)" class="st2 st3">Pavilion </text>
+				<text transform="matrix(1 0 0 1 443.0456 224.9495)" class="st2 st3"> Angle</text>
+			</g>
+		</g>
 	</g>
-	<g >
-		<text  id="SVG_Pavilion_angel-deg" data-rounding="1"  data-suffix="°"  transform="matrix(1 0 0 1 454.3017 207.7002)" class="st1 st2">0.0°</text>
-	</g>
-	<g id="Crown_9_">
-		<text id="text_SVG_Crown_height-percentages_9_" transform="matrix(1 0 0 1 443.4505 177.3495)" class="st3"><tspan x="0" y="0" class="st1 st2">Pavilion </tspan><tspan x="0" y="14" class="st1 st2"> Angle</tspan></text>
+	<g id="Round">
+		<g>
+			<line class="st4" x1="465.7" y1="159.9" x2="465.7" y2="144.6"/>
+			<line class="st4" x1="181" y1="84.1" x2="385.5" y2="84.1"/>
+			<line class="st4" x1="465.3" y1="144.6" x2="385.5" y2="84.1"/>
+			<line class="st4" x1="288.8" y1="316.2" x2="465.7" y2="159.9"/>
+			<line class="st4" x1="181" y1="84.1" x2="99.9" y2="144.6"/>
+			<line class="st4" x1="99.5" y1="156.8" x2="99.5" y2="144.6"/>
+			<line class="st4" x1="288.8" y1="316.2" x2="99.5" y2="156.8"/>
+			<line class="st4" x1="153.7" y1="104.5" x2="213.4" y2="84.1"/>
+			<line class="st4" x1="288.2" y1="144.6" x2="213.4" y2="84.1"/>
+			<line class="st4" x1="361.3" y1="85.1" x2="288.2" y2="144.6"/>
+			<line class="st4" x1="408.8" y1="101.9" x2="361.3" y2="85.1"/>
+			<line class="st4" x1="411.7" y1="104" x2="415.9" y2="141.7"/>
+			<line class="st4" x1="341.5" y1="101.2" x2="415.9" y2="141.7"/>
+			<line class="st4" x1="290.8" y1="84.1" x2="341.5" y2="101.2"/>
+			<line class="st4" x1="236.7" y1="102.9" x2="290.8" y2="84.1"/>
+			<line class="st4" x1="158.4" y1="144.6" x2="236.7" y2="102.9"/>
+			<line class="st4" x1="220.3" y1="143.6" x2="236.7" y2="102.9"/>
+			<line class="st4" x1="359.8" y1="143.4" x2="341.5" y2="101.2"/>
+			<line class="st4" x1="158.4" y1="144.6" x2="155.8" y2="103.8"/>
+			<line class="st4" x1="115.2" y1="146.2" x2="155.8" y2="103.8"/>
+			<line class="st4" x1="118.7" y1="160.8" x2="247.4" y2="281.5"/>
+			<line class="st4" x1="158.2" y1="157.8" x2="252.9" y2="286"/>
+			<line class="st4" x1="220.3" y1="159.2" x2="288.5" y2="314.6"/>
+			<line class="st4" x1="359.9" y1="158.4" x2="288.5" y2="314.6"/>
+			<line class="st4" x1="417.8" y1="156.8" x2="302.5" y2="283.9"/>
+			<line class="st4" x1="332.3" y1="277.7" x2="417.8" y2="156.8"/>
+			<line class="st4" x1="452.4" y1="161.2" x2="345.2" y2="266.4"/>
+			<line class="st4" x1="275.4" y1="284.8" x2="158.8" y2="158.5"/>
+			<line class="st4" x1="289.3" y1="155.3" x2="275.3" y2="284"/>
+			<line class="st4" x1="289.3" y1="155.3" x2="302.5" y2="283.9"/>
+			<path class="st4" d="M115.2,146.2c14.1,4.5,29.4,3.9,43.2-1.6"/>
+			<path class="st4" d="M158.4,144.5c20.3,5.8,41.8,5.4,61.9-1"/>
+			<path class="st4" d="M220.3,143.5c9.7,2.1,19.5,3.3,29.4,3.7c12.8,0.5,25.7-0.4,38.3-2.6"/>
+			<path class="st4" d="M288.2,144.5c12.1,3,24.5,4.4,36.9,4.1c11.7-0.3,23.4-2.1,34.7-5.3"/>
+			<path class="st4" d="M359.8,143.3c18.5,4.9,38,4.3,56.2-1.6"/>
+			<line class="st4" x1="417.3" y1="108.2" x2="451.3" y2="146"/>
+			<path class="st4" d="M415.9,141.7c10.5,6.7,23.5,8.3,35.3,4.3"/>
+			<path class="st4" d="M451.3,146c2.7,1.2,5.6,1.6,8.5,1c2-0.4,3.8-1.2,5.4-2.4"/>
+			<path class="st4" d="M452.4,161.2c1.4-2.3,3.8-3.9,6.5-4.3c2.4-0.3,4.8,0.5,6.7,2"/>
+			<path class="st4" d="M417.3,157.5c11.7-4.3,24.7-2.9,35.2,3.7"/>
+			<path class="st4" d="M359.9,158.4c18.8-4.6,38.4-4.8,57.3-0.8"/>
+			<path class="st4" d="M289.3,155.3c23.5-3.6,47.5-2.5,70.6,3"/>
+			<path class="st4" d="M220.3,159.2c22.5-5.9,46-7.2,69-3.9"/>
+			<path class="st4" d="M158.2,157.7c20.9-3.4,42.2-3,62.9,1.2"/>
+			<path class="st4" d="M118.7,160.8c13.1-4.6,27.2-5.7,40.8-3.2"/>
+			<path class="st4" d="M118.7,160.8c-1.8-1.9-4-3.4-6.5-4.3c-4.1-1.4-8.6-1.3-12.7,0.3"/>
+			<path class="st4" d="M115.2,146.2c-2.4,1.8-5.5,2.6-8.5,2.2c-2.7-0.4-5.1-1.8-6.8-3.9"/>
+		</g>
 	</g>
 </g>
-<g id="Round">
-	<g>
-		<line class="st5" x1="471.3" y1="138.3" x2="471.3" y2="123"/>
-		<line class="st5" x1="186.6" y1="62.5" x2="391.1" y2="62.5"/>
-		<line class="st5" x1="470.9" y1="123" x2="391.1" y2="62.5"/>
-		<line class="st5" x1="294.4" y1="294.6" x2="471.3" y2="138.3"/>
-		<line class="st5" x1="186.6" y1="62.5" x2="105.5" y2="123"/>
-		<line class="st5" x1="105.1" y1="135.2" x2="105.1" y2="123"/>
-		<line class="st5" x1="294.4" y1="294.6" x2="105.1" y2="135.2"/>
-		<line class="st5" x1="159.3" y1="82.9" x2="219" y2="62.5"/>
-		<line class="st5" x1="293.8" y1="123" x2="219" y2="62.5"/>
-		<line class="st5" x1="366.9" y1="63.5" x2="293.8" y2="123"/>
-		<line class="st5" x1="414.4" y1="80.3" x2="366.9" y2="63.5"/>
-		<line class="st5" x1="417.3" y1="82.4" x2="421.5" y2="120.1"/>
-		<line class="st5" x1="347.1" y1="79.6" x2="421.5" y2="120.1"/>
-		<line class="st5" x1="296.4" y1="62.5" x2="347.1" y2="79.6"/>
-		<line class="st5" x1="242.3" y1="81.3" x2="296.4" y2="62.5"/>
-		<line class="st5" x1="164" y1="123" x2="242.3" y2="81.3"/>
-		<line class="st5" x1="225.9" y1="122" x2="242.3" y2="81.3"/>
-		<line class="st5" x1="365.4" y1="121.8" x2="347.1" y2="79.6"/>
-		<line class="st5" x1="164" y1="123" x2="161.4" y2="82.2"/>
-		<line class="st5" x1="120.8" y1="124.6" x2="161.4" y2="82.2"/>
-		<line class="st5" x1="124.3" y1="139.2" x2="253" y2="259.9"/>
-		<line class="st5" x1="163.8" y1="136.2" x2="258.5" y2="264.4"/>
-		<line class="st5" x1="225.9" y1="137.6" x2="294.1" y2="293"/>
-		<line class="st5" x1="365.5" y1="136.8" x2="294.1" y2="293"/>
-		<line class="st5" x1="423.4" y1="135.2" x2="308.1" y2="262.3"/>
-		<line class="st5" x1="337.9" y1="256.1" x2="423.4" y2="135.2"/>
-		<line class="st5" x1="458" y1="139.6" x2="350.8" y2="244.8"/>
-		<line class="st5" x1="281" y1="263.2" x2="164.4" y2="136.9"/>
-		<line class="st5" x1="294.9" y1="133.7" x2="280.9" y2="262.4"/>
-		<line class="st5" x1="294.9" y1="133.7" x2="308.1" y2="262.3"/>
-		<path class="st5" d="M120.8,124.6c14.1,4.5,29.4,3.9,43.2-1.6"/>
-		<path class="st5" d="M164,122.9c20.3,5.8,41.8,5.4,61.9-1"/>
-		<path class="st5" d="M225.9,121.9c9.7,2.1,19.5,3.3,29.4,3.7c12.8,0.5,25.7-0.4,38.3-2.6"/>
-		<path class="st5" d="M293.8,122.9c12.1,3,24.5,4.4,36.9,4.1c11.7-0.3,23.4-2.1,34.7-5.3"/>
-		<path class="st5" d="M365.4,121.7c18.5,4.9,38,4.3,56.2-1.6"/>
-		<line class="st5" x1="422.9" y1="86.6" x2="456.9" y2="124.4"/>
-		<path class="st5" d="M421.5,120.1c10.5,6.7,23.5,8.3,35.3,4.3"/>
-		<path class="st5" d="M456.9,124.4c2.7,1.2,5.6,1.6,8.5,1c2-0.4,3.8-1.2,5.4-2.4"/>
-		<path class="st5" d="M458,139.6c1.4-2.3,3.8-3.9,6.5-4.3c2.4-0.3,4.8,0.5,6.7,2"/>
-		<path class="st5" d="M422.9,135.9c11.7-4.3,24.7-2.9,35.2,3.7"/>
-		<path class="st5" d="M365.5,136.8c18.8-4.6,38.4-4.8,57.3-0.8"/>
-		<path class="st5" d="M294.9,133.7c23.5-3.6,47.5-2.5,70.6,3"/>
-		<path class="st5" d="M225.9,137.6c22.5-5.9,46-7.2,69-3.9"/>
-		<path class="st5" d="M163.8,136.1c20.9-3.4,42.2-3,62.9,1.2"/>
-		<path class="st5" d="M124.3,139.2c13.1-4.6,27.2-5.7,40.8-3.2"/>
-		<path class="st5" d="M124.3,139.2c-1.8-1.9-4-3.4-6.5-4.3c-4.1-1.4-8.6-1.3-12.7,0.3"/>
-		<path class="st5" d="M120.8,124.6c-2.4,1.8-5.5,2.6-8.5,2.2c-2.7-0.4-5.1-1.8-6.8-3.9"/>
-	</g>
-</g>
+<line class="st0" x1="538.5" y1="83.2" x2="542.8" y2="83.2"/>
 </svg>
